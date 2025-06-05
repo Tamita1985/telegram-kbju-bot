@@ -3,7 +3,7 @@ from telebot import types
 from flask import Flask, request
 import os  # Добавлено для поддержки переменной окружения PORT
 
-TOKEN = '7517404462:AAEcuLj0cMavBhlWw_61DJAIMZK89KEtmRY'
+TOKEN = '7517404462:AAF7JCz7U2lWK3IQ8_wid2pS722NMRE9JfY'
 bot = telebot.TeleBot(TOKEN)
 app = Flask(__name__)
 
