@@ -1,6 +1,7 @@
 import telebot
 from telebot import types
 from flask import Flask, request
+import os  # Добавлено для поддержки переменной окружения PORT
 
 TOKEN = '7517404462:AAEcuLj0cMavBhlWw_61DJAIMZK89KEtmRY'
 bot = telebot.TeleBot(TOKEN)
@@ -163,4 +164,5 @@ def home():
 if __name__ == "__main__":
     bot.remove_webhook()
     bot.set_webhook(url=f"https://telegram-kbju-bot.onrender.com/{TOKEN}")
-   
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host="0.0.0.0", port=port)
